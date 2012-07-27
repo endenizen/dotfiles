@@ -33,7 +33,35 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# history stuff
+HISTFILE=~/.history
+SAVEHIST=10000
+HISTSIZE=10000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_VERIFY
+
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+setopt EXTENDED_HISTORY
+
+# needed for mysql/python stuff
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
+
+# brian's custom stuff
+p() { cd ~/projects/$1; }
+_p() { _files -W ~/projects -/; }
+compdef _p p
+
+unsetopt correct_all
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/bferrell/projects/arcanist/bin:/usr/local/mysql/bin:/Users/bferrell/Dropbox/scripts
