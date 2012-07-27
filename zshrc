@@ -61,6 +61,10 @@ p() { cd ~/projects/$1; }
 _p() { _files -W ~/projects -/; }
 compdef _p p
 
+s() { cd ~/Dropbox/scripts/$1; }
+_s() { _files -W ~/Dropbox/scripts -/; }
+compdef _s s
+
 unsetopt correct_all
 
 # Customize to your needs...
