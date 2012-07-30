@@ -1,1 +1,6 @@
 ENV
+.idea/dataSources.*
+.idea/dictionaries
+.idea/scopes
+mysql-connector-java-5.1.16-bin.jar
+mysql-connector-license.txt
