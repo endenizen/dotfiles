@@ -3,4 +3,5 @@ ENV
 .idea/dictionaries
 .idea/scopes
 mysql-connector-java-5.1.16-bin.jar
+mysql-connector-java-5.1.18-bin.jar
 mysql-connector-license.txt
