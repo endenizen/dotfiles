@@ -44,11 +44,12 @@ set incsearch
 " tabs
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " indent
-set ai
-set si
+"set ai
+"set si
 
 " wrap lines
 set wrap
